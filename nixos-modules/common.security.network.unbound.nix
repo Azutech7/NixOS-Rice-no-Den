@@ -1,6 +1,6 @@
 { inputs, config, pkgs, lib, host, user, ... }: {
 
-	options.modules.common.network.security.unbound.enable = lib.mkEnableOption "common.network.security.unbound";
+	options.modules.common.security.network.unbound.enable = lib.mkEnableOption "common.security.network.unbound";
 
 	config = lib.mkIf config.modules.common.network.security.unbound.enable {
 
