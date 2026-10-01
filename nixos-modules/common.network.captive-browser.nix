@@ -1,6 +1,6 @@
 { inputs, config, ... }: {
 
-    options.modules.captive-browser.enable = lib.mkEnableOption "captive-browser";
+    options.modules.common.network.captive-browser.enable = lib.mkEnableOption "common.network.captive-browser";
 
 	config = lib.mkIf config.modules.captive-browser.enable {
             
