@@ -1,6 +1,6 @@
 { ... }: {
     imports = [
-        ./captive-browser.nix
+        ./common.network.captive-browser.nix
         ./common.audio.pipewire.nix
         ./common.boot.nix
         ./common.hardware.automatic-compatability.nix
@@ -15,9 +15,9 @@
         ./common.network.networkmanager.nix
         ./common.network.openssh.nix
         ./common.network.printing.nix
-        ./common.network.security.dnscrypt-proxy.nix
-        ./common.network.security.firewall.nix
-        ./common.network.security.unbound.nix
+        ./common.security.network.dnscrypt-proxy.nix
+        ./common.security.network.firewall.nix
+        ./common.security.network.unbound.nix
         ./common.security.gnupg.nix
         ./common.security.pam.nix
         ./common.storage.nixpkgs.nix
