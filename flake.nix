@@ -19,6 +19,8 @@
 
             modules = [
                 ./hosts/<HOST_NAME>/config.nix
+                
+                ./nixos-modules/manifest.nix
 
                 home-manager.nixosModules.home-manager
                 {
@@ -26,6 +28,10 @@
                     home-manager.useUserPackages = true;
 
                     home-manager.extraSpecialArgs = { inherit inputs; };
+
+                    home-manager.sharedModules = [
+                        ./home-modules/manifest.nix
+                    ];
 
                     home-manager.users = {
                         <USER_NAME> = import ./users/<USER_NAME>/config.nix;
