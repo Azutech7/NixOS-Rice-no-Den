@@ -1,4 +1,4 @@
-{ inputs, den, pkgs, lib, host, config, ... }: {
+{ inputs, pkgs, lib, host, config, ... }: {
 
     options.modules.common.audio.pipewire.enable = lib.mkEnableOption "common.audio.pipewire";
 

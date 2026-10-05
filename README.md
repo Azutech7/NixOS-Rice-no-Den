@@ -1,6 +1,7 @@
 # NixOS-Rice
 
 This rice ~~uses~~ does **NOT** use [den](https://github.com/denful/den)
+(nothing against the project, I just couldn't use it reliably)
 
 
 ### TODO LIST:
@@ -20,7 +21,7 @@ This rice ~~uses~~ does **NOT** use [den](https://github.com/denful/den)
   - [ ] java docs
   - [ ] cli runner (with System.in tracking)
 - [ ] custom image
-- [ ] plymouth (boot screens)
+- [x] plymouth (boot screens)
 - [ ] disko integration (alongside NixOS fileSystems)
   - [ ] disko
   - [ ] fileSystems
