@@ -10,8 +10,11 @@
 
     outputs = { self, nixpkgs, home-manager, ... }@inputs: {
 
+        #####################
+        #### HOSTS BEGIN ####
+        #####################
 
-
+        /* TEMPLATE
         nixosConfigurations.<HOST_NAME> = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
 
@@ -40,8 +43,11 @@
                 }
             ];
         };
+        */
 
-
+        ###################
+        #### HOSTS END ####
+        ###################
 
     };
 }
