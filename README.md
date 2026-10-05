@@ -18,4 +18,6 @@ This rice ~~uses~~ does **NOT** use [den](https://github.com/denful/den)
 - [ ] satty (screenshot editing)
 - [x] mako (notification daemon; w/ theme module integration)
 - [ ] Genymotion (android emulation)
+- [ ] grlim+slurp (instead of hyprshot)
+- [ ] defaulting (changing everything to be defaults)
 
