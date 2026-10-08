@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, lib, host, user, ... }: {
+{ inputs, pkgs, lib, host, config, ... }: {
 
 	options.modules.common.storage.space-optimizations.enable = lib.mkEnableOption "common.storage.space-optimizations";
 

@@ -1,4 +1,4 @@
-{ inputs, config, ... }: {
+{ inputs, pkgs, lib, host, config, ... }: {
 
 	options.modules.common.hardware.graphics.nvidia.enable = lib.mkEnableOption "common.hardware.graphics.nvidia";
 

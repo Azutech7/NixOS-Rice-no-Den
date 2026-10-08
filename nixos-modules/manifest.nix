@@ -12,7 +12,7 @@
         ./common.laptop.battery-optimizations.nix
         ./common.network.avahi.nix
         ./common.network.bluetooth.nix
-        ./common.network.networkmanager.nix
+        ./common.network.network-manager.nix
         ./common.network.openssh.nix
         ./common.network.printing.nix
         ./common.security.network.dnscrypt-proxy.nix
@@ -21,10 +21,11 @@
         ./common.security.gnupg.nix
         ./common.security.pam.nix
         ./common.storage.nixpkgs.nix
-        ./common.storage.space-optimization.nix
+        ./common.storage.space-optimizations.nix
         ./flatpak.nix
         ./hyprland.nix
         ./ly.nix
         ./steam.nix
+        ./stremio.aiostreams.nix
     ];
 }

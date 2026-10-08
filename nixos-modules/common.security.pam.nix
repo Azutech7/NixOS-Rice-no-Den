@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, lib, host, user, ... }: {
+{ inputs, pkgs, lib, host, config, ... }: {
 
 	options.modules.common.security.pam.enable = lib.mkEnableOption "common.security.pam";
 

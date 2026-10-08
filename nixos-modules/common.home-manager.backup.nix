@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, lib, host, user, ... }: {
+{ inputs, pkgs, lib, host, config, ... }: {
 
     options.modules.common.home-manager.backup.enable = lib.mkEnableOption "common.home-manager.backup";
 

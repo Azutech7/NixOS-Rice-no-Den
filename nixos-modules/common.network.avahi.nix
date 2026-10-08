@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, lib, host, user, ... }: {
+{ inputs, pkgs, lib, host, config, ... }: {
 
     options.modules.common.network.avahi.enable = lib.mkEnableOption "common.network.avahi";
 

@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, lib, host, user, ... }: {
+{ inputs, config, pkgs, lib, host, ... }: {
 
     options.modules.steam.enable = lib.mkEnableOption "steam";
 

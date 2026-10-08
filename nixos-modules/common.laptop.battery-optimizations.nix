@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, lib, host, ... }: {
+{ inputs, pkgs, lib, host, config, ... }: {
 
     options.modules.common.laptop.battery-optimizations.enable = lib.mkEnableOption "common.laptop.battery-optimizations";
 

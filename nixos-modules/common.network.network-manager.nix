@@ -1,8 +1,8 @@
-{ inputs, config, pkgs, lib, host, user, ... }: {
+{ inputs, pkgs, lib, host, config, ... }: {
 
-	options.modules.common.network.networkmanager.enable = lib.mkEnableOption "common.network.networkmanager";
+	options.modules.common.network.network-manager.enable = lib.mkEnableOption "common.network.network-manager";
 
-	config = lib.mkIf config.modules.common.network.networkmanager.enable {
+	config = lib.mkIf config.modules.common.network.network-manager.enable {
 
 		networking = {
 			networkmanager = {
