@@ -2,7 +2,7 @@
 
     options.modules.fuzzel.enable = lib.mkEnableOption "fuzzel";
 
-	config = lib.mkIf config.modules.fuzzel.enable {
+	config = lib.mkIf config.modules.fuzzel.enable (
         let
             bg = config.modules.theme.color.background;
             fg = config.modules.theme.color.foreground;
@@ -41,5 +41,5 @@
             };
         };
 		
-	};
+	);
 }

@@ -2,7 +2,7 @@
 
 	options.modules.btop.enable = lib.mkEnableOption "btop";
 
-	config = lib.mkIf config.modules.btop.enable {
+	config = lib.mkIf config.modules.btop.enable (
         let 
             c = "#${config.modules.theme.color.violet}";
         in
@@ -147,5 +147,5 @@
             };
         };
 		
-	};
+	);
 }

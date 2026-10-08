@@ -2,7 +2,7 @@
 
 	options.modules.fastfetch.enable = lib.mkEnableOption "fastfetch";
 
-	config = lib.mkIf config.modules.fastfetch.enable {
+	config = lib.mkIf config.modules.fastfetch.enable (
         let
             c = config.modules.theme.color;
             img = config.modules.theme.image.fetch-icon;
@@ -89,5 +89,5 @@
             };
         };
 			
-	};
+	);
 }

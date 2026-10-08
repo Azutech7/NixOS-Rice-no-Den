@@ -2,7 +2,7 @@
 
 	options.modules.hyprland.enable = lib.mkEnableOption "hyprland";
 
-	config = lib.mkIf config.modules.hyprland.enable {
+	config = lib.mkIf config.modules.hyprland.enable (
 		let
 			terminal = "${pkgs.kitty}/bin/kitty";
 			menu = "${pkgs.fuzzel}/bin/fuzzel";
@@ -230,5 +230,5 @@
 			};
 		};
 		
-	};
+	);
 }

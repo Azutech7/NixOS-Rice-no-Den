@@ -2,7 +2,7 @@
 
     options.modules.micro.enable = lib.mkEnableOption "micro";
 
-    config = lib.mkIf config.modules.micro.enable {
+    config = lib.mkIf config.modules.micro.enable (
         let
             c = config.modules.theme.color;
         in
@@ -81,5 +81,5 @@
             '';
         };
 		
-	};
+    );
 }

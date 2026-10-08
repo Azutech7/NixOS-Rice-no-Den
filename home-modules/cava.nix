@@ -2,7 +2,7 @@
 
 	options.modules.cava.enable = lib.mkEnableOption "cava";
 
-	config = lib.mkIf config.modules.cava.enable {
+	config = lib.mkIf config.modules.cava.enable (
         let
             bg = config.modules.theme.color.background;
             fg = config.modules.theme.color.foreground;
@@ -23,5 +23,5 @@
             };
         };
 		
-	};
+	);
 }

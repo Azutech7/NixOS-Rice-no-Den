@@ -2,7 +2,7 @@
 
     options.modules.bash.enable = lib.mkEnableOption "bash";
 
-    config = lib.mkIf config.modules.bash.enable {
+    config = lib.mkIf config.modules.bash.enable (
         let
             color = config.modules.theme.color.primary;
         
@@ -34,5 +34,5 @@
             };
         };
 		
-	};
+	);
 }

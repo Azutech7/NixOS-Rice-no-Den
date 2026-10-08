@@ -2,7 +2,7 @@
 
 	options.modules.common.hardware.graphics.nvidia.enable = lib.mkEnableOption "common.hardware.graphics.nvidia";
 
-	config = lib.mkIf modules.common.hardware.graphics.nvidia.enable {
+	config = lib.mkIf config.modules.common.hardware.graphics.nvidia.enable {
 
 		hardware.nvidia = {
 			open = true;

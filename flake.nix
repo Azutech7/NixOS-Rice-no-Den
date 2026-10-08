@@ -37,7 +37,14 @@
                     ];
 
                     home-manager.users = {
-                        <USER_NAME> = import ./users/<USER_NAME>/config.nix;
+                        home-manager.users = {
+                            <USER_NAME> = {
+                                imports =  [./users/<USER_NAME>/config.nix];
+                                home.username = inputs.nixpkgs.lib.mkForce "<USER_NAME>";
+                                home.homeDirectory = inputs.nixpkgs.lib.mkForce "/home/<USER_NAME>";
+                                home.stateVersion = inputs.nixpkgs.lib.mkForce "25.11";
+                            };
+                        };
                     };
 
                 }
@@ -55,6 +62,9 @@
                 
                 ./nixos-modules/manifest.nix
 
+                nixpkgs.config.allowUnfree = true
+                nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
                 home-manager.nixosModules.home-manager
                 {
                     home-manager.useGlobalPkgs = true;
@@ -67,7 +77,12 @@
                     ];
 
                     home-manager.users = {
-                        server-manager = import ./users/server-manager/config.nix;
+                        server-manager = {
+                            imports =  [./users/server-manager/config.nix];
+                            home.username = inputs.nixpkgs.lib.mkForce "server-manager";
+                            home.homeDirectory = inputs.nixpkgs.lib.mkForce "/home/server-manager";
+                            home.stateVersion = inputs.nixpkgs.lib.mkForce "25.11";
+                        };
                     };
 
                 }

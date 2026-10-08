@@ -3,6 +3,8 @@
         ./common.network.captive-browser.nix
         ./common.audio.pipewire.nix
         ./common.boot.nix
+        ./common.boot.plymouth.nix
+        ./common.extra-experimental-features.nix
         ./common.hardware.automatic-compatability.nix
         ./common.hardware.graphics.intel-mesa.nix
         ./common.hardware.graphics.nix
@@ -20,7 +22,7 @@
         ./common.security.network.unbound.nix
         ./common.security.gnupg.nix
         ./common.security.pam.nix
-        ./common.storage.nixpkgs.nix
+        ./common.nixpkgs.allow-unfree
         ./common.storage.space-optimizations.nix
         ./flatpak.nix
         ./hyprland.nix

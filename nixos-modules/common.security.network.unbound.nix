@@ -2,7 +2,7 @@
 
 	options.modules.common.security.network.unbound.enable = lib.mkEnableOption "common.security.network.unbound";
 
-	config = lib.mkIf config.modules.common.network.security.unbound.enable {
+	config = lib.mkIf config.modules.common.security.network.unbound.enable {
 
 		services.unbound = {
 			enable = true;

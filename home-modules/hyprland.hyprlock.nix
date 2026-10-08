@@ -2,7 +2,7 @@
 
     options.modules.hyprland.hyprlock.enable = lib.mkEnableOption "hyprland.hyprlock";
 
-    config = lib.mkIf config.modules.hyprland.hyprlock.enable {
+    config = lib.mkIf config.modules.hyprland.hyprlock.enable (
         let
             c = config.modules.theme.color;
             img = config.modules.theme.image.wallpaper;
@@ -104,5 +104,5 @@
             };
         };
 			
-	};
+	);
 }

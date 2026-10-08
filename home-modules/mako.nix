@@ -2,7 +2,7 @@
 	
     options.modules.mako.enable = lib.mkEnableOption "mako";
 
-	config = lib.mkIf config.modules.mako.enable {
+	config = lib.mkIf config.modules.mako.enable (
         let
             bg = config.modules.theme.color.background;
             fg = config.modules.theme.color.foreground;
@@ -31,7 +31,7 @@
             };
         };
         
-	};
+    );
 }
 
 

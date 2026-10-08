@@ -2,7 +2,7 @@
 
 	options.modules.common.security.network.dnscrypt-proxy.enable = lib.mkEnableOption "common.security.network.dnscrypt-proxy";
 
-	config = lib.mkIf config.modules.common.network.security.dnscrypt-proxy.enable {
+	config = lib.mkIf config.modules.common.security.network.dnscrypt-proxy.enable {
 
 		services.dnscrypt-proxy = {
 				enable = true;
