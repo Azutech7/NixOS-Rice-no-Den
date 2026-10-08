@@ -79,7 +79,7 @@
                 color-link tab-error              "#${c.background},#${c.error}"
                 color-link trailingws             "#${c.background},#${c.error}"
             '';
-        };
+        }
 		
     );
 }

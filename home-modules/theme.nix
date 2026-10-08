@@ -6,7 +6,7 @@
 
     options.modules.theme.enable = lib.mkEnableOption "theme";
 
-	config = lib.mkIf config.modules.theme.enable {
+	config = lib.mkIf config.modules.theme.enable (
         let
             cfg = config.modules.theme;
         in
@@ -131,7 +131,7 @@
                 };
                 gtk4.theme = null;
             };
-		};
+		}
 
-	};
+    );
 }

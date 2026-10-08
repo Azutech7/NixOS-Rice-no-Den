@@ -32,7 +32,7 @@
                     clear && fastfetch
                 '';
             };
-        };
+        }
 		
 	);
 }

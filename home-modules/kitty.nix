@@ -64,7 +64,7 @@
                 "ctrl+v" = "paste_from_clipboard";
             };
             };
-        };
+        }
 		
     );
 }

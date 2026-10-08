@@ -18,7 +18,6 @@
             security.gnupg.enable = true;
             security.network.firewall.enable = true;
             security.pam.enable = true;
-            storage.nixpkgs.enable = true;
             storage.space-optimizations.enable = true;
         };
 

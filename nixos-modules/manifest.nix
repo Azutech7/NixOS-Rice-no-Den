@@ -22,7 +22,7 @@
         ./common.security.network.unbound.nix
         ./common.security.gnupg.nix
         ./common.security.pam.nix
-        ./common.nixpkgs.allow-unfree
+        ./common.nixpkgs.allow-unfree.nix
         ./common.storage.space-optimizations.nix
         ./flatpak.nix
         ./hyprland.nix

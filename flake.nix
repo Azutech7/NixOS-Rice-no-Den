@@ -62,9 +62,6 @@
                 
                 ./nixos-modules/manifest.nix
 
-                nixpkgs.config.allowUnfree = true
-                nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
                 home-manager.nixosModules.home-manager
                 {
                     home-manager.useGlobalPkgs = true;
