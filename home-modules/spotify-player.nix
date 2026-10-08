@@ -1,4 +1,4 @@
-{ inputs, pkgs, lib, host, user, ... }: {
+{ inputs, config, lib, pkgs, ... }: {
 
     options.modules.spotify-player.enable = lib.mkEnableOption "spotify-player";
 

@@ -1,4 +1,4 @@
-{ inputs, config, lib, ... }: {
+{ inputs, config, lib, pkgs, ... }: {
 
     options.modules.kitty.enable = lib.mkEnableOption "kitty";
 

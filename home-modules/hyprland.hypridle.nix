@@ -1,4 +1,4 @@
-{ inputs, config, ... }: {
+{ inputs, config, lib, pkgs, ... }: {
 
     options.modules.hyprland.hypridle.enable = lib.mkEnableOption "hyprland.hypridle";
 

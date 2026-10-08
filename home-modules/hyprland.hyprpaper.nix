@@ -1,4 +1,4 @@
-{ inputs, config, ... }: {
+{ inputs, config, lib, pkgs, ... }: {
 
     options.modules.hyprland.hyprpaper.enable = lib.mkEnableOption "hyprland.hyprpaper";
 

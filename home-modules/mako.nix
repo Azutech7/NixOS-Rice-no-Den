@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, ... }: {
+{ inputs, config, lib, pkgs, ... }: {
 	
     options.modules.mako.enable = lib.mkEnableOption "mako";
 

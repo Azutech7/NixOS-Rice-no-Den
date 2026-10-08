@@ -1,4 +1,4 @@
-{ inputs, config, ... }: {
+{ inputs, config, lib, pkgs, ... }: {
 
     options.modules.hyprland.hyprlock.enable = lib.mkEnableOption "hyprland.hyprlock";
 

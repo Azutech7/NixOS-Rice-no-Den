@@ -1,4 +1,4 @@
-{ inputs, pkgs, lib, host, user, ... }: {
+{ inputs, config, lib, pkgs, ... }: {
 
     options.modules.wayland-clipboard.enable = lib.mkEnableOption "wayland-clipboard";
 

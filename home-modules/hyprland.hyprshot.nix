@@ -1,4 +1,4 @@
-{ inputs, config, ... }: {
+{ inputs, config, lib, pkgs, ... }: {
 
     options.modules.hyprland.hyprshot.enable = lib.mkEnableOption "hyprland.hyprshot";
 

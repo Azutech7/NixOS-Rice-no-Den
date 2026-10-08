@@ -1,4 +1,4 @@
-{ inputs, config, ... }: {
+{ inputs, config, lib, pkgs, ... }: {
 
     options.modules.waybar.enable = lib.mkEnableOption "waybar";
 
