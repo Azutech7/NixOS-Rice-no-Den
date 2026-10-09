@@ -8,9 +8,11 @@
 
         virtualisation.oci-containers.containers.aiostreams = {
             image = "ghcr.io/viren070/aiostreams:latest";
-            
+
             autoStart = true;
             ports = [ "3000:3000" ];
+
+            volumes = [ "/var/lib/aiostreams:/app/data" ];
 
             environmentFiles = [ "/var/lib/aiostreams/secret.env" ];
         };
