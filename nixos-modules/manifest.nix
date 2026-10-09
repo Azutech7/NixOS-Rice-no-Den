@@ -27,7 +27,10 @@
         ./flatpak.nix
         ./hyprland.nix
         ./ly.nix
+        #./services.adguard.nix
+        ./services.aiostreams.nix
+        #./services.tailscale.nix
+        ./services.trakt.nix
         ./steam.nix
-        ./stremio.aiostreams.nix
     ];
 }
