@@ -8,13 +8,11 @@
 
         virtualisation.oci-containers.containers.aiostreams = {
             image = "ghcr.io/viren070/aiostreams:latest";
-
+            
             autoStart = true;
-
             ports = [ "3000:3000" ];
-            environment = {
-                PORT = "3000";
-            };
+
+            environmentFiles = [ "/var/lib/aiostreams/secret.env" ];
         };
 
         networking.firewall.allowedTCPPorts = [ 3000 ];
