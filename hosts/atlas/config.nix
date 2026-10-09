@@ -22,6 +22,7 @@
         };
 
         services.aiostreams.enable = true;
+        services.trakt.enable = true;
     };
 
     environment.systemPackages = with pkgs; [
