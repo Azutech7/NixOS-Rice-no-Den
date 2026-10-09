@@ -7,13 +7,12 @@
         virtualisation.oci-containers.backend = "docker";
 
         virtualisation.oci-containers.containers.trakt = {
-            image = "ghcr.io/ericvlog/trakt-sync-rating-addon:latest";
+            image = "ericvlog/trakt-sync-rating-addon:latest";
 
             autoStart = true;
             ports = [ "7000:7000" ];
             
             extraOptions = [
-                #"--network=host"
                 "--memory=2g"
                 "--memory-swappiness=0"
                 "--cpus=2"
