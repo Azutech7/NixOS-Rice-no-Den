@@ -21,7 +21,7 @@
             storage.space-optimizations.enable = true;
         };
 
-        stremio.aiostreams.enable = true;
+        services.aiostreams.enable = true;
     };
 
     environment.systemPackages = with pkgs; [

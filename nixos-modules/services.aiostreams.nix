@@ -1,8 +1,8 @@
 { inputs, config, pkgs, lib, host, ... }: {
 
-    options.modules.stremio.aiostreams.enable = lib.mkEnableOption "stremio.aiostreams";
+    options.modules.services.aiostreams.enable = lib.mkEnableOption "services.aiostreams";
 
-    config = lib.mkIf config.modules.stremio.aiostreams.enable {
+    config = lib.mkIf config.modules.services.aiostreams.enable {
 
         virtualisation.oci-containers.backend = "docker";
 
@@ -15,6 +15,17 @@
             volumes = [ "/var/lib/aiostreams:/app/data" ];
 
             environmentFiles = [ "/var/lib/aiostreams/secret.env" ];
+
+            extraOptions = [
+                "--memory=4g"
+                "--memory-swappiness=0"
+                "--cpus=2"
+                "--restart=on-failure:5"
+                "--ulimit=nofile=2048:4096"
+            ];
+
+            log-driver = "journald";
+
         };
 
         networking.firewall.allowedTCPPorts = [ 3000 ];
