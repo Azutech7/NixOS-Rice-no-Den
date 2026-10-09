@@ -2,7 +2,7 @@
 
     options.modules.kitty.enable = lib.mkEnableOption "kitty";
 
-	config = lib.mkIf options.modules.kitty.enable (
+	config = lib.mkIf config.modules.kitty.enable (
         let
             bg = config.modules.theme.color.background;
             fg = config.modules.theme.color.foreground;
