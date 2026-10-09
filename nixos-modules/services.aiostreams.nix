@@ -22,9 +22,8 @@
                 "--cpus=2"
                 "--restart=on-failure:5"
                 "--ulimit=nofile=2048:4096"
+                "--log-driver=journald" 
             ];
-
-            log-driver = "journald";
 
         };
 
