@@ -29,33 +29,3 @@
 
     };
 }
-
-
-
-
-
-
-
-
-
-
-
-
-{ config, pkgs, ... }:
-
-{
-  # Ensure the container backend engine is enabled
-  virtualisation.oci-containers.backend = "docker"; # Or "podman"
-
-  virtualisation.oci-containers.containers = {
-    trakt-sync-tracker = {
-      image = "ghcr.io/ericvlog/trakt-sync-rating-addon:latest";
-      ports = [ "7000:7000" ];
-      extraOptions = [ "--network=host" ]; # Allows easy localhost/LAN discovery
-      autoStart = true;
-    };
-  };
-
-  # Open the port in the firewall so AIOStreams and other devices can access it
-  networking.firewall.allowedTCPPorts = [ 7000 ];
-}
