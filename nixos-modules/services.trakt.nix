@@ -7,7 +7,12 @@
         virtualisation.oci-containers.backend = "docker";
 
         virtualisation.oci-containers.containers.trakt = {
-            image = "ericvlog/trakt-sync-rating-addon:latest";
+            image = "local/trakt-sync-rating-addon:latest";
+            # Build locally from: https://github.com/ericvlog/trakt-sync-rating-addon
+            # git clone https://github.com/ericvlog/trakt-sync-rating-addon
+            # cd trakt-sync-rating-addon
+            # sed -i '/apk add/s/ /\n/2g' Dockerfile
+            # sudo docker build . -t local/trakt-sync-rating-addon:latest
 
             autoStart = true;
             ports = [ "7000:7000" ];
