@@ -13,6 +13,14 @@
             ports = [ "3000:3000" ];
 
             volumes = [ "/var/lib/aiostreams:/app/data" ];
+            # Prepare Locally:
+            # sudo mkdir -p /var/lib/aiostreams && sudo tee /var/lib/aiostreams/secret.env > /dev/null <<EOF
+            # > SECRET_KEY=$(sudo cat /var/lib/aiostreams/secret.env | grep SECRET_KEY | cut -d'=' -f2)
+            # > BASE_URL=http://<LOCAL_SERVER_IP>:3000
+            # > EOF
+            # sudo chmod 755 /var/lib/aiostreams
+            # sudo chmod 600 /var/lib/aiostreams/secret.env
+
 
             environmentFiles = [ "/var/lib/aiostreams/secret.env" ];
 
