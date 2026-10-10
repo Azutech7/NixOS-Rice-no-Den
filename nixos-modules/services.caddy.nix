@@ -8,25 +8,30 @@
             enable = true;
 
             virtualHosts = {
+
                 "aiostreams.azutech.cc".extraConfig = ''
                     tls internal
-                    rewrite * /stremio{uri}
-                    reverse_proxy localhost:3000
+                    localhost:3000
                 '';
 
                 "jellyfin.azutech.cc".extraConfig = ''
                     tls internal
-                    rewrite * /jellyfin{uri}
-                    reverse_proxy localhost:3000
+                    handle / { redir * /jellyfin 302 }
+                    handle { reverse_proxy localhost: 3000 {
+                        header_up X-Forwarded-Prefix /jellyfin
+                    }}
                 '';
 
                 "adguard.azutech.cc".extraConfig = ''
                     tls internal
-                    reverse_proxy 127.0.0.1:8080
+                    reverse_proxy localhost:8080
                 '';
+
             };
         };
 
 
     };
 }
+
+
