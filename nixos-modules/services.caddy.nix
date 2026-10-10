@@ -11,7 +11,8 @@
 
                 "aiostreams.azutech.cc".extraConfig = ''
                     tls internal
-                    localhost:3000
+                    #localhost:3000
+                    reverse_proxy http://localhost:3000
                 '';
 
                 "jellyfin.azutech.cc".extraConfig = ''
