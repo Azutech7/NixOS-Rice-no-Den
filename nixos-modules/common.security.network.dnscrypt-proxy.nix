@@ -4,7 +4,7 @@
 
 	config = lib.mkIf config.modules.common.security.network.dnscrypt-proxy.enable {
 
-		services.dnscrypt-proxy2 = {
+		services.dnscrypt-proxy = {
 				enable = true;
 				settings = {
 				
