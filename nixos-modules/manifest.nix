@@ -30,6 +30,7 @@
         #./services.adguard.nix
         ./services.aiostreams.nix
         ./services.caddy.nix
+        ./services.mc-server.nix
         ./services.tailscale.nix
         ./services.trakt.nix
         ./steam.nix
