@@ -10,13 +10,19 @@
 			
 			settings = {
 				server = {
-					interface = [ "127.0.0.1" ];
-					port = 53;
-					access-control = [ "127.0.0.0/8 allow" ];
+					interface = [ "127.0.0.1" "100.118.213.98" ]; # . , talescale
+					#port = 53;
+					access-control = [ "127.0.0.0/8 allow" "100.64.0.0/10 allow" ];
 					
 					do-ip4 = true;
 					do-ip6 = false;
+
+					do-udp = true;
+      				do-tcp = true;
+
+      				hide-version = true;
 					prefetch = true;
+
 					harden-dnssec-stripped = true;
 					qname-minimisation-strict = true;
 

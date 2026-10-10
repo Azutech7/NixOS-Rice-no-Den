@@ -19,6 +19,9 @@
             security.network.firewall.enable = true;
             security.pam.enable = true;
             storage.space-optimizations.enable = true;
+
+            security.network.dnscrypt-proxy.enable = true;
+            security.network.unbound.enable = true;
         };
 
         services.aiostreams.enable = true;
