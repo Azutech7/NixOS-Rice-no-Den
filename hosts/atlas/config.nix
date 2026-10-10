@@ -22,7 +22,8 @@
         };
 
         services.aiostreams.enable = true;
-        services.trakt.enable = true;
+        #services.trakt.enable = true; #DOES NOT WORK CURRENTLY
+        services.tailscale.enable = true;
     };
 
     environment.systemPackages = with pkgs; [

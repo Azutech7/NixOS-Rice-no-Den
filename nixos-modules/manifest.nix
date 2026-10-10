@@ -29,7 +29,7 @@
         ./ly.nix
         #./services.adguard.nix
         ./services.aiostreams.nix
-        #./services.tailscale.nix
+        ./services.tailscale.nix
         ./services.trakt.nix
         ./steam.nix
     ];
