@@ -27,7 +27,7 @@
 
         };
 
-        #networking.firewall.allowedTCPPorts = [ 3000 ];
+        #networking.firewall.allowedTCPPorts = [ 7000 ]; #tailscale instead
 
     };
 }

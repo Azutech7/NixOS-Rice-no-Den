@@ -22,6 +22,7 @@
         };
 
         services.aiostreams.enable = true;
+        services.caddy.enable = true;
         #services.trakt.enable = true; #DOES NOT WORK CURRENTLY
         services.tailscale.enable = true;
     };

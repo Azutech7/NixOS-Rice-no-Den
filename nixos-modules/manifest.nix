@@ -29,6 +29,7 @@
         ./ly.nix
         #./services.adguard.nix
         ./services.aiostreams.nix
+        ./services.caddy.nix
         ./services.tailscale.nix
         ./services.trakt.nix
         ./steam.nix
