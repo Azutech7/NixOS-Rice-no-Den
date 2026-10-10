@@ -12,6 +12,7 @@
         ./common.home-manager.backup.nix
         ./common.input.touchpad.nix
         ./common.laptop.battery-optimizations.nix
+        ./common.network.anti-panic.nix
         ./common.network.avahi.nix
         ./common.network.bluetooth.nix
         ./common.network.network-manager.nix
