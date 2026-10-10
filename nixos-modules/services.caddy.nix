@@ -9,16 +9,19 @@
 
             virtualHosts = {
                 "aiostreams.azutech.cc".extraConfig = ''
+                    tls internal
                     rewrite * /stremio{uri}
                     reverse_proxy localhost:3000
                 '';
 
                 "jellyfin.azutech.cc".extraConfig = ''
+                    tls internal
                     rewrite * /jellyfin{uri}
                     reverse_proxy localhost:3000
                 '';
 
                 "adguard.azutech.cc".extraConfig = ''
+                    tls internal
                     reverse_proxy 127.0.0.1:8080
                 '';
             };
