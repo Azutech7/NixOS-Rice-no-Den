@@ -22,6 +22,7 @@
 
             security.network.dnscrypt-proxy.enable = true;
             security.network.unbound.enable = true;
+            common.network.anti-panic.enable = true;
         };
 
         services.aiostreams.enable = true;
