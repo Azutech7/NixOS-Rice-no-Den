@@ -10,7 +10,7 @@
 				
 				server_names = [ "cloudflare" "quad9-dnscrypt-main" ];
 				
-				listen_addresses = [ "127.0.0.1:5353" ];
+				listen_addresses = [ "127.0.0.1:5300" ];
 
 				require_dnssec = true;
 				require_nofilter = false;
